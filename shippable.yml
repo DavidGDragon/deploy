@@ -1,11 +1,11 @@
 deploy:
   env:
-    - foo=bar
+    - foo="bar"
 
   before_prov:
     - echo 'this is happening before provisioning'
     - ls -ltra
-    - echo $foo
+    - echo "value for foo is $foo"
 
   on_prov_error:
     - echo 'provisioning failed miserably'
