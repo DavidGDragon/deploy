@@ -154,7 +154,7 @@ resource "aws_instance" "trriplejayNAT" {
   # this is a special ami preconfigured to do NAT
   ami = "ami-2dae821d"
   availability_zone = "${var.availability_zone}"
-  instance_type = "c1.medium"
+  instance_type = "t2.micro"
   key_name = "${var.key_name}"
 
   subnet_id = "${aws_subnet.trriplejayPubSN0-0.id}"
